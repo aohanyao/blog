@@ -75,7 +75,7 @@
 	    
 	上面的配置将图标改为了ic_launcher，app的名称改为了这是默认的配置，为了保险起见，先直接运行APP，看看有没有更改成功。
 	
-	![构建默认的配置](http://obh9jd33g.bkt.clouddn.com/%E6%9E%84%E5%BB%BA%E5%8F%98%E7%A7%8D1.png)
+	![构建默认的配置](http://obh9jd33g.bkt.clouddn.com/%E6%9E%84%E5%BB%BA%E5%8F%98%E7%A7%8D-1.png)
 	
 	从上图可以看到，已经直接运行安装成功了，可以证明我们替换占位符是正确的。
 	
@@ -109,7 +109,7 @@
   
   详细配置截图:
   
-  ![构建变种配置](http://obh9jd33g.bkt.clouddn.com/goujianbianzhong2.png)
+  ![构建变种配置](http://obh9jd33g.bkt.clouddn.com/%E6%9E%84%E5%BB%BA%E5%8F%98%E7%A7%8D-2.png)
   
   在上面的配置中，分别修改了APP的包名，名称以及图标。接下来就是验证是否成功了。只要这这两个都能安装上就算是成功(同样的包名是不能安装在同一台手机上的，当然有种黑科技不算)。配置完成后同步一下。
   
@@ -118,15 +118,15 @@
  	菜单->Build->Select Build Variant
  这时候左下会出现一个窗口，如果Select Build Variant无法选中的话，请先选择app目录。
  
- ![Select Build Variant](http://obh9jd33g.bkt.clouddn.com/%E6%9E%84%E5%BB%BA%E5%8F%98%E7%A7%8D3.png)
+ ![Select Build Variant](http://obh9jd33g.bkt.clouddn.com/%E6%9E%84%E5%BB%BA%E5%8F%98%E7%A7%8D-3.png)
  
  可以看到，在gradle中配置的flavorsdemo1和flavorsdemo2都出现在了了选项中，一个是debug版本，一个是release版本，不用管它，直接选择debug版本就好，选择完成后会重新创建，这里先选择flavorsdemo1Debug，等待build完成后直接运行。安装完成后再选择flavorsdemo2Debug版本，等待build，安装。见证奇迹的时候到了：
  
- ![构建变种成功安装](http://obh9jd33g.bkt.clouddn.com/%E6%9E%84%E5%BB%BA%E5%8F%98%E7%A7%8D4.png)
+ ![构建变种成功安装](http://obh9jd33g.bkt.clouddn.com/%E6%9E%84%E5%BB%BA%E5%8F%98%E7%A7%8D-4.png)
  
  可以看到，变种1和变种2都安装成功了，而且图标都不一样。这时候可能会有人问：包名呢？来来，使用ADM来看看正在运行中的程序：
  
- ![查看两个变种的包名](http://obh9jd33g.bkt.clouddn.com/%E6%9E%84%E5%BB%BA%E5%8F%98%E7%A7%8D5.png)
+ ![查看两个变种的包名](http://obh9jd33g.bkt.clouddn.com/%E6%9E%84%E5%BB%BA%E5%8F%98%E7%A7%8D-5.png)
  
  看，demo1和demo2都在，而且和我们配置的一毛一样呀，看到这里，有没有朋友想到更广泛的用途呢？
  
@@ -143,14 +143,14 @@
 在这我只实现第一条，一法通百法通，其它都是一样的。
 1. 首先要使用project视图，这样才能完全的看到整个项目结构，然后在src下(和main同级)创建和变种名字相同的目录.以下：
 
-![构建变种，创建源码目录](http://obh9jd33g.bkt.clouddn.com/%E6%9E%84%E5%BB%BA%E5%8F%98%E7%A7%8D6.png)
+![构建变种，创建源码目录](http://obh9jd33g.bkt.clouddn.com/%E6%9E%84%E5%BB%BA%E5%8F%98%E7%A7%8D-6.png)
 
 2. 创建包
 	
 首先在flavorsdemo1和flavorsdemo2下创建java和res文件夹，让后再java目录下创建包，这里创建的包要和main下面的一样，而且flavorsdemo1和flavorsdemo2的目录也必须一致，还有变种中存在的类，main中是不允许存在的。
 
 先看图，再解释：
-![变种目录结构](http://obh9jd33g.bkt.clouddn.com/%E6%9E%84%E5%BB%BA%E5%8F%98%E7%A7%8D7.png)
+![变种目录结构](http://obh9jd33g.bkt.clouddn.com/%E6%9E%84%E5%BB%BA%E5%8F%98%E7%A7%8D-7.png)
 
 三个源码下的包名都是一致的，在变种中增加了global包，并创建了一个全局类
 
@@ -174,27 +174,29 @@ flavorsdemo2 Constant
 
 布局文件
 
+
 ``` xml
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.aohanyao.product.flavorsdemos.MainActivity">
 
-    <TextView
-        android:id="@+id/tv_api"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-</LinearLayout>
+	<?xml version="1.0" encoding="utf-8"?>
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    xmlns:app="http://schemas.android.com/apk/res-auto"
+	    xmlns:tools="http://schemas.android.com/tools"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical"
+	    tools:context="com.aohanyao.product.flavorsdemos.MainActivity">
+	
+	    <TextView
+	        android:id="@+id/tv_api"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Hello World!"
+	        app:layout_constraintBottom_toBottomOf="parent"
+	        app:layout_constraintLeft_toLeftOf="parent"
+	        app:layout_constraintRight_toRightOf="parent"
+	        app:layout_constraintTop_toTopOf="parent" />
+	
+	</LinearLayout>
 
 ``` 
 
@@ -214,8 +216,54 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 ```
+
 直接对Constant.API_ADDRESS进行引用，来，直接启动两个变种吧。
+
+![构建变种8-源码配置](http://obh9jd33g.bkt.clouddn.com/%E6%9E%84%E5%BB%BA%E5%8F%98%E7%A7%8D8-%E6%BA%90%E7%A0%81%E9%85%8D%E7%BD%AE.png)
 
 图中分别是flavorsdemo1和flavorsdemo1两个变种，可见，显示的都是对应的Constant.API_ADDRESS中的值，看到这里，配置不同源码部分就算是完成，所以应该发散一下思维，这可可以做到很多事情的。
 
 ### 3.资源配置
+#### 业务场景
+比如，变种一和变种二的某个功能模块相同，但是名字和图标不相同
+
+	1. 大量文字变更
+	2. 大量图标变更
+
+
+#### 实践
+替换字符串资源和图片资源
+
+首先在两个变种的res目录下创建values目录，创建相同的资源文件fd_string.xml，各自创建相同的字符串资源名称。并在MainActivity进行了引用。
+
+![构建变种9-配置不同的字符串资源](http://obh9jd33g.bkt.clouddn.com/%E6%9E%84%E5%BB%BA%E5%8F%98%E7%A7%8D9-%E9%85%8D%E7%BD%AE%E4%B8%8D%E5%90%8C%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%B5%84%E6%BA%90.png)
+
+接下来分别启动两个变种，看看结果
+
+![构建变种9-配置不同的字符串资源-结果](http://obh9jd33g.bkt.clouddn.com/%E6%9E%84%E5%BB%BA%E5%8F%98%E7%A7%8D9-%E9%85%8D%E7%BD%AE%E4%B8%8D%E5%90%8C%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%B5%84%E6%BA%90-%E7%BB%93%E6%9E%9C.png)
+
+很明显，达到了想要的效果。
+
+下一步就是图片资源的替换，和上面一样，创建相应的资源文件夹，放入名称一样，内容不一样的图片，并在MainActivity中引用。
+
+![构建变种10-图片资源配置](http://obh9jd33g.bkt.clouddn.com/%E6%9E%84%E5%BB%BA%E5%8F%98%E7%A7%8D10-%E5%9B%BE%E7%89%87%E8%B5%84%E6%BA%90%E9%85%8D%E7%BD%AE.png)
+
+来看看结果
+
+![构建变种10-图片资源配置-结果](http://obh9jd33g.bkt.clouddn.com/%E6%9E%84%E5%BB%BA%E5%8F%98%E7%A7%8D10-%E5%9B%BE%E7%89%87%E8%B5%84%E6%BA%90%E9%85%8D%E7%BD%AE-%E7%BB%93%E6%9E%9C.png)
+
+至此，利用Gradle构建变种就算是完全完成了。
+
+
+### 最后
+
+如果文中有什么不对的地方，欢迎指出！
+
+[源码地址](https://github.com/aohanyao/ProductFlavorsDemos) 欢迎star
+
+我的[简书](http://www.jianshu.com/u/3e53005808b1)
+
+
+来来扫下码，关注一下吧,或者微信搜索AndroidRookie
+
+![AndroidRookie](http://obh9jd33g.bkt.clouddn.com/qrcode_for_gh_bce1408a47fc_344.jpg)
