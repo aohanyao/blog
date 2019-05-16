@@ -1,6 +1,7 @@
 # blog
-blog
+> 扫描二维码，关注公众号，时不时会悄悄的推送一些小技巧的文章~~
 
+![AndroidRookie](https://avatars1.githubusercontent.com/u/13215774?s=460&v=4)
 # 前言
 >包含所有已完成、未完成、规划中的所有文章，不定时更新。
 
@@ -25,7 +26,7 @@ blog
 - [x] [Gradle 使用技巧(六) - 使用统一的Gradle管理 ](http://fullscreendeveloper.cn/articles/2018/08/29/1535529528287.html)
 - [x] [Gradle 使用技巧(七) - 10分钟将快速开源 Jitpack 与增加中文注释](http://fullscreendeveloper.cn/articles/2018/09/03/1535976021124.html)
 - [ ] Gradle 使用技巧(八) - 常用task详讲
-- [ ]  Gradle 使用技巧(九) - 快速NDK
+- [ ] Gradle 使用技巧(九) - 快速NDK
 - [ ] Gradle 使用技巧(十) - 加速编译、减少内存消耗
 - [ ] Gradle 使用技巧(十一) - 快速编译从Github上面down下来的项目
 - [ ] Gradle 使用技巧(十二) - Res文件夹过滤
@@ -64,16 +65,18 @@ blog
 - [ ] 热修复原理
 
 ## Android之路
-- [ ] Material design系列（1）- CardView
-- [ ] Android 之路 (1) - 登陆
-- [ ] Android之路 (3) - 折叠的引导页
-- [ ] Android之路 (4) - MainActivity
-- [ ] Android之路 (5) - Basic简单封装与Dialog
-- [ ] Recyclerview setSpanSizeLookup
-- [ ] Retrofit完全使用手册
-- [ ] RxJava、Retrofit - 自定义Gson转换器
-- [ ] RxJava、Retrofit - cookie管理
-- [ ] RxJava、Retrofit - 刷新Token（登陆令牌）
+- [x] [Android 之路 (1) - RxJava2+Retrofit实现简单登陆](http://fullscreendeveloper.cn/articles/2018/10/08/1538984930011.html)
+- [x] [Android 之路 (2) - 对登陆进行 MVP 改造](http://fullscreendeveloper.cn/articles/2018/10/09/1539084359439.html)
+- [x] [Android 之路 (3) - 对Retrofit的封装](http://fullscreendeveloper.cn/articles/2018/10/10/1539167974165.html)
+- [x] [Android 之路 (4) - 对RxJava2的简单封装](http://fullscreendeveloper.cn/articles/2018/10/11/1539255083332.html)
+- [x] [Android 之路 (5) - 对Dialog的简单封装](http://fullscreendeveloper.cn/articles/2018/10/13/1539412875888.html)
+- [x] [Android 之路 (6) - 关于Toast和Log的封装](http://fullscreendeveloper.cn/articles/2018/11/07/1541580610117.html)
+- [x] [Android 之路 (7) - 对BaseActivity的简单封装](http://fullscreendeveloper.cn/articles/2019/05/06/1557135966652.html)
+- [ ] RxJava2 + Retrofit2 完全指南
+    - [x] [RxJava2 + Retrofit2 完全指南 之 统一状态码/Exception处理](http://fullscreendeveloper.cn/articles/2019/02/13/1550055450006.html)
+    - [x] [RxJava2 + Retrofit2 完全指南 之 对返回Response的统一处理](http://fullscreendeveloper.cn/articles/2019/02/14/1550129423217.html)
+    - [x] [RxJava2 + Retrofit2 完全指南 之 动态Url/Path/Parameter/Header](http://fullscreendeveloper.cn/articles/2019/02/15/1550195797528.html)
+    - [x] [RxJava2 + Retrofit2 完全指南 之 Authenticator处理与Token静默刷新](http://fullscreendeveloper.cn/articles/2019/05/15/1557918921370.html)
 - [ ] Android - 65k问题
 - [ ] Android studio 集成svn
 - [ ] 开源库-IconFont的使用
